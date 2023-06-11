@@ -17,6 +17,7 @@ module.exports = {
   ],
   overrides: [],
   parserOptions: {
+    ecmaVersion: "latest",
     ecmaFeatures: {
       jsx: true,
     },
@@ -28,16 +29,12 @@ module.exports = {
       version: "detect",
     },
   },
-  plugins: ["react", "@typescript-eslint", "react-hooks"],
+  plugins: ["react", "@typescript-eslint", "react-hooks", "react-refresh"],
   rules: {
     "arrow-parens": ["error", "always"],
     camelcase: ["error", { properties: "always" }],
     "brace-style": ["error", "stroustrup", { allowSingleLine: true }],
-    "operator-linebreak": [
-      "error",
-      "before",
-      { overrides: { "?": "before", ":": "before" } },
-    ],
+    "operator-linebreak": ["error", "before", { overrides: { "?": "before", ":": "before" } }],
     curly: ["error", "all"],
     eqeqeq: ["error", "always"],
     indent: ["error", 2],
@@ -88,10 +85,7 @@ module.exports = {
     "template-curly-spacing": ["error", "never"],
     "comma-spacing": ["error", { before: false, after: true }],
     "comma-dangle": ["error", "always-multiline"],
-    "@typescript-eslint/ban-ts-comment": [
-      "error",
-      { "ts-ignore": "allow-with-description" },
-    ],
+    "@typescript-eslint/ban-ts-comment": ["error", { "ts-ignore": "allow-with-description" }],
     "@typescript-eslint/naming-convention": [
       "warn",
       { selector: "default", format: ["camelCase"] },
@@ -156,5 +150,6 @@ module.exports = {
       },
     ],
     "react/void-dom-elements-no-children": "error",
+    "react-refresh/only-export-components": "warn",
   },
 };
