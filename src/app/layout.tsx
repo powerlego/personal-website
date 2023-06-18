@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import HeaderLink from "@/_components/HeaderLink";
 import Stack from "@/_components/Stack";
 import ThemeSwitcher from "@/_components/ThemeSwitcher";
+import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,7 +14,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html className={`${window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : ""}`} lang="en">
+    <html lang="en">
       <body
         className={`${inter.className} bg-gray-100 dark:bg-gray-900 text-black dark:text-white min-h-full max-w-[100vw] relative`}
       >
@@ -31,24 +32,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </header>
         <main className="py-3">{children}</main>
         <div className="bg-gray-200 dark:bg-gray-800 bottom-0 bg-opacity-80 shadow-accent-t shadow-gray-300 dark:shadow-gray-700 my-0 mx-auto px-6">
-          <footer className="py-9 min-h-[20rem]">
-            <Stack
-              align="center"
-              className="mt-12 mb-0"
-              direction="row"
-              flex="initial"
-              gap="0"
-              justify="between"
-              padding="0"
-            >
-              <Stack align="stretch" direction="col" flex="initial" gap="4" justify="start" padding="0">
+          <footer className="py-9">
+            <div className="mt-12 mb-0 flex flex-row items-center justify-between p-0 flex-initial">
+              <div className="flex flex-col flex-initial gap-4 p-0 justify-start items-stretch">
                 <p className="text-sm">© 2023</p>
-                <Stack align="center" direction="row" flex="initial" gap="3" justify="start">
-                  <Link href="https://github.com/powerlego">GitHub</Link>
-                </Stack>
-              </Stack>
+                <div className="flex flex-initial gap-3 p-0 flex-row items-center justify-start">
+                  <Link href="https://github.com/powerlego">
+                    <FaGithub className="w-6 h-6 fill-gray-800 dark:fill-gray-200" />
+                  </Link>
+                  <hr className="h-5 w-0.5 bg-gray-800 dark:bg-gray-200" />
+                </div>
+              </div>
               <ThemeSwitcher />
-            </Stack>
+            </div>
           </footer>
         </div>
       </body>
