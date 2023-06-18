@@ -13,11 +13,11 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html className={`${window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : ""}`} lang="en">
       <body
-        className={`${inter.className} bg-gray-100 dark:bg-gray-800 text-black dark:text-white min-h-full max-w-[100vw] relative`}
+        className={`${inter.className} bg-gray-100 dark:bg-gray-900 text-black dark:text-white min-h-full max-w-[100vw] relative`}
       >
-        <header className="bg-gray-200 dark:bg-gray-700 h-16 sticky top-0 bg-opacity-80 shadow-accent-b shadow-gray-300 dark:shadow-gray-600 flex flex-col justify-around items-center backdrop-blur-sm backdrop-saturate-150">
+        <header className="bg-gray-200 dark:bg-gray-800 h-16 sticky top-0 bg-opacity-80 shadow-accent-b shadow-gray-300 dark:shadow-gray-700 flex flex-col justify-around items-center backdrop-blur-sm backdrop-saturate-150">
           <nav className="w-full flex flex-1 items-center relative">
             <div className="w-full flex items-center gap-6 ">
               <HeaderLink className="[&:nth-child(2)]:ml-5" href="/">
@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </nav>
         </header>
         <main className="py-3">{children}</main>
-        <div className="bg-gray-200 dark:bg-gray-700 bottom-0 bg-opacity-80 shadow-accent-t shadow-gray-300 dark:shadow-gray-600 my-0 mx-auto px-6">
+        <div className="bg-gray-200 dark:bg-gray-800 bottom-0 bg-opacity-80 shadow-accent-t shadow-gray-300 dark:shadow-gray-700 my-0 mx-auto px-6">
           <footer className="py-9 min-h-[20rem]">
             <Stack
               align="center"
