@@ -1,7 +1,6 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import HeaderLink from "@/_components/HeaderLink";
-import Stack from "@/_components/Stack";
 import ThemeSwitcher from "@/_components/ThemeSwitcher";
 import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
@@ -40,7 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <Link href="https://github.com/powerlego">
                     <FaGithub className="w-6 h-6 fill-gray-800 dark:fill-gray-200" />
                   </Link>
-                  <hr className="h-5 w-0.5 bg-gray-800 dark:bg-gray-200" />
+                  <hr className="h-5 w-[1px] bg-gray-800 dark:bg-gray-200" />
                 </div>
               </div>
               <ThemeSwitcher />
