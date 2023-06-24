@@ -16,7 +16,7 @@ export default function HeaderLink({ href, children, className }: HeaderLinkProp
   return (
     <Link
       href={href}
-      className={`${isActive ? "text-blue-700 dark:text-blue-500" : "text-black dark:text-white"} font-bold text-lg ${
+      className={`${isActive ? "text-blue-800 dark:text-blue-300" : "text-black dark:text-white"} font-bold text-lg ${
         className ?? ""
       }`}
     >

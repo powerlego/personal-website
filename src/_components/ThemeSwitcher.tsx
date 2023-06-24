@@ -51,7 +51,7 @@ export default function ThemeSwitcher({ className }: ThemeSwitcherProps) {
         }}
       >
         <FaSun
-          className="fill-gray-600 dark:fill-gray-400 group-aria-checked:fill-black dark:group-aria-checked:fill-white align-middle"
+          className="fill-gray-600 dark:fill-gray-400 group-aria-checked:fill-black dark:group-aria-checked:fill-white "
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={1.5}
@@ -68,7 +68,7 @@ export default function ThemeSwitcher({ className }: ThemeSwitcherProps) {
         }}
       >
         <FaDesktop
-          className="fill-gray-600 dark:fill-gray-400 group-aria-checked:fill-black dark:group-aria-checked:fill-white align-middle"
+          className="fill-gray-600 dark:fill-gray-400 group-aria-checked:fill-black dark:group-aria-checked:fill-white "
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={1.5}
@@ -86,7 +86,7 @@ export default function ThemeSwitcher({ className }: ThemeSwitcherProps) {
         }}
       >
         <FaMoon
-          className="fill-gray-600 dark:fill-gray-400 group-aria-checked:fill-black dark:group-aria-checked:fill-white align-middle"
+          className="fill-gray-600 dark:fill-gray-400 group-aria-checked:fill-black dark:group-aria-checked:fill-white "
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={1.5}
